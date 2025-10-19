@@ -13,17 +13,20 @@ function getComputerChoice() {
     } else if (computerChoice <= 1 && computerChoice > (2 / 3)) {
         computerChoice = 'scissors';
     }
+
+    console.log(`Computer picked: ${computerChoice}.`);
     return computerChoice;
 }
 
 function getHumanChoice() {
     humanChoice = prompt('Enter your choice:');
+    console.log(`You picked: ${humanChoice}`);
     return humanChoice;
 }
 
 function playRound(computerChoice, humanChoice) {
-    computerChoice = getComputerChoice();
     humanChoice = getHumanChoice();
+    computerChoice = getComputerChoice();
 
     humanChoice = humanChoice.toLowerCase();
     if (humanChoice === 'rock') {
