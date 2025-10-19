@@ -92,4 +92,20 @@ function playRound(computerChoice, humanChoice) {
     }
 }
 
-playRound(computerChoice, humanChoice);
+function playGame() {
+    playRound(computerChoice, humanChoice);
+    playRound(computerChoice, humanChoice);
+    playRound(computerChoice, humanChoice);
+    playRound(computerChoice, humanChoice);
+    playRound(computerChoice, humanChoice);
+
+    if (computerScore > humanScore) {
+        console.log(`You lose the game! Computer score: ${computerScore}. Your score: ${humanScore}.`)
+    } else if (computerScore === humanScore) {
+        console.log(`It's a tie! Computer score: ${computerScore}. Your score: ${humanScore}.`);
+    } else if (computerScore < humanScore) {
+        console.log(`You win the game! Computer score: ${computerScore}. Your score: ${humanScore}.`);
+    }
+}
+
+playGame();
